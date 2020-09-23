@@ -10,4 +10,10 @@ Required:
 1. Create a github account. If you don't have one please register: https://github.com/
 
 Project:
-1. A project structure will be provided using Spring Boot & Thymeleaf but any tech stack will be accepted.
+
+A project structure will be provided using Spring Boot & Thymeleaf but any tech stack will be accepted.
+The project will contain 3 parts:
+
+1. application implementation + junit tests - deadline week 7
+2. static & dynamic analysis - deadline week 9
+3. selenium tests - deadline week 13
