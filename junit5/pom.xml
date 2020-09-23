@@ -9,19 +9,12 @@
     <version>1.0-SNAPSHOT</version>
     <properties>
         <junit5.version>RELEASE</junit5.version>
-        <assertj.core.version>3.16.1</assertj.core.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>${junit5.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <version>${assertj.core.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

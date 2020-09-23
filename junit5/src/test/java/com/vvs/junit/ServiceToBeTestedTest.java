@@ -1,14 +1,33 @@
 package com.vvs.junit;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class ServiceToBeTestedTest {
 
     ServiceToBeTested serviceToBeTested = new ServiceToBeTested();
+
+    @BeforeAll
+    public static void init() {
+        System.out.println("BeforeAll call");
+    }
+
+    @BeforeEach
+    public void beforeMethod() {
+        System.out.println("BeforeEach call");
+    }
+
+    @AfterAll
+    public static void cleanup() {
+        System.out.println("AfterAll call");
+    }
+
+    @AfterEach
+    public void afterMethod() {
+        System.out.println("AfterEach call");
+    }
 
     @Test
     @DisplayName("Test add 2 positive numbers -> returns result")
@@ -24,8 +43,7 @@ public class ServiceToBeTestedTest {
     public void whenAddFirstNull_thenThrowException() {
         Integer firstNo = null;
         Integer secondNo = 4;
-        assertThatThrownBy(() -> serviceToBeTested.addNumbers(firstNo, secondNo))
-                .isExactlyInstanceOf(NullPointerException.class);
+        assertThrows(NullPointerException.class, () -> serviceToBeTested.addNumbers(firstNo, secondNo));
     }
 
     @Test
@@ -33,7 +51,6 @@ public class ServiceToBeTestedTest {
     public void whenAddSecondNull_thenThrowException() {
         Integer firstNo = 22;
         Integer secondNo = null;
-        assertThatThrownBy(() -> serviceToBeTested.addNumbers(firstNo, secondNo))
-                .isExactlyInstanceOf(NullPointerException.class);
+        assertThrows(NullPointerException.class, () -> serviceToBeTested.addNumbers(firstNo, secondNo));
     }
 }
