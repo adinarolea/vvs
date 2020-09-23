@@ -43,7 +43,7 @@ public class ServiceToBeTestedTest {
     public void whenAddFirstNull_thenThrowException() {
         Integer firstNo = null;
         Integer secondNo = 4;
-        assertThrows(NullPointerException.class, () -> serviceToBeTested.addNumbers(firstNo, secondNo));
+        assertThrows(IllegalArgumentException.class, () -> serviceToBeTested.addNumbers(firstNo, secondNo));
     }
 
     @Test
@@ -51,6 +51,6 @@ public class ServiceToBeTestedTest {
     public void whenAddSecondNull_thenThrowException() {
         Integer firstNo = 22;
         Integer secondNo = null;
-        assertThrows(NullPointerException.class, () -> serviceToBeTested.addNumbers(firstNo, secondNo));
+        assertThrows(IllegalArgumentException.class, () -> serviceToBeTested.addNumbers(firstNo, secondNo));
     }
 }

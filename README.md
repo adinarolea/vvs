@@ -4,6 +4,7 @@ Recommendation:
 
 1. IDE - IntelIJ see link https://www.jetbrains.com/idea/download
 2. Junit version 5 (version 4 is also accepted)
+https://junit.org/junit5/docs/current/user-guide/
 3. Use maven to add project dependencies
 
 Required:
