@@ -2,7 +2,7 @@ package com.vvs.junit;
 
 import org.junit.jupiter.api.*;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class ServiceToBeTestedTest {
@@ -35,7 +35,7 @@ public class ServiceToBeTestedTest {
         Integer firstNo = 2;
         Integer secondNo = 4;
         Integer result = serviceToBeTested.addNumbers(firstNo, secondNo);
-        assertThat(result).isEqualTo(6);
+        assertEquals(6, result);
     }
 
     @Test
