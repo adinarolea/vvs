@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<header>
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+</header>
+<body>
+
+<span class="my-element">Hello there!</span>
+<img class="my-element" src="/images/test.jpg"/>
+
+<button class="my-element" type="button" th:onclick="greetings();">Press Me</button>
+
+<script type="text/javascript" th:src="@{/js/app.js}"></script>
+</body>
+</html>
