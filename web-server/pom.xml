@@ -15,6 +15,9 @@
     <properties>
         <lombok.version>1.18.10</lombok.version>
         <common-lang.version>2.6</common-lang.version>
+        <selenium-java.version>3.141.59</selenium-java.version>
+        <webdriver-manager.version>4.2.2</webdriver-manager.version>
+
     </properties>
 
     <dependencies>
@@ -45,6 +48,23 @@
             <artifactId>commons-lang</artifactId>
             <version>${common-lang.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium-java.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>${selenium-java.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>${webdriver-manager.version}</version>
+        </dependency>
+
 
         <dependency>
             <groupId>org.assertj</groupId>

@@ -7,9 +7,11 @@
 
 <span class="my-element">Hello there!</span>
 <img class="my-element" src="/images/test.jpg"/>
+<input id="input-id"/>
 
-<button class="my-element" type="button" th:onclick="greetings();">Press Me</button>
-
+<button id="greeting-button" class="my-element" type="button" th:onclick="greetings();">Press Me</button>
+<span id="button-pressed"></span>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" th:src="@{/js/app.js}"></script>
 </body>
 </html>
